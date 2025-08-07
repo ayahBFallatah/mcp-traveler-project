@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mcp-weather-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn mcp:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: OPENROUTESERVICE_API_KEY
+        sync: false  # Set value in Render dashboard
+      - key: METEOMATICS_API_USERNAME
+        sync: false  # Set value in Render dashboard
+      - key: METEOMATICS_API_PASSWORD
+        sync: false
