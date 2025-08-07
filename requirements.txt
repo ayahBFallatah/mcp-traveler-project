@@ -8,4 +8,3 @@ httpx
 geopy
 requests
 meteomatics
-#pip install -r requirements.txt
